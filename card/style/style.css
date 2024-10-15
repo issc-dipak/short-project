@@ -1,0 +1,163 @@
+/* GLOBAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* FONTS */
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Regular.ttf);
+    font-weight: 400;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url(../assets/fonts/Roboto-Bold.ttf);
+    font-weight: 700;
+}
+
+/* COLORS */
+:root {
+    /* primary */
+    --brand-color: rgb(42, 38, 95);
+    --button: rgb(29, 24, 107);
+    /* neutral */
+    --dark: rgb(20, 16, 68);
+    --light: rgb(255, 255, 255);
+    --light-grey: rgb(211, 211, 245);
+    --background-blue: rgb(113, 117, 218);
+    --dark-bg: rgb(0, 0, 0); /* Dark background */
+}
+
+body {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Afacad Flux", "Roboto", sans-serif; /* Fallback to Roboto */
+    font-weight: 400;
+    font-size: 0.9rem;
+    color: var(--light-grey);
+    background-color: var(--dark-bg); /* Black background */
+}
+
+.profile-card {
+    width: 350px;
+    padding: 3rem 0 0 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    border-radius: 14px;
+    background-color: var(--light); /* White background */
+    box-shadow: 10px 21px 27px rgba(0, 0, 0, 0.4); /* Softer shadow */
+} 
+
+.profile-card:hover {
+    transform: translateY(-10px); /* Card lifts up on hover */
+    box-shadow: 0 25px 40px rgba(0, 0, 0, 0.5); /* Shadow deepens on hover */
+}
+
+
+.profile-pic {
+    padding: 5px;
+    width: 160px;
+    border-radius: 50%; /* Perfect circle */
+    filter: brightness(70%);
+    border: 3px solid var(--brand-color); /* Border color */
+    transition: all 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: translateY(-5px);
+    filter: brightness(110%); /* Increased brightness */
+}
+
+.details {
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+    background-color: var(--dark-bg); /* Black background */
+    border-radius: 0 0 14px 14px;
+}
+
+.name {
+    font-size: 1.3rem;
+    font-weight: 700;
+    color: var(--light); /* White text */
+    margin-bottom: 20px;
+}
+
+.location {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.location img {
+    height: 1rem;
+    filter: invert(); /* White icon */
+}
+
+.button {
+    width: 70%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.button button {
+    width: 100px;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    background-color: var(--dark); /* Darker button background */
+    color: var(--light); /* White text */
+    border-radius: 5px;
+    box-shadow: 0px 1px 3px 0px rgba(0, 0, 0, 0.5); /* Softer shadow */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.button button:hover {
+    transform: translateY(-3px);
+    color: white;
+    background-color: var(--button); /* Button hover color */
+}
+
+.skills {
+    margin-top: 30px;
+    padding: 1rem 0;
+    border-top: 2px solid var(--dark); /* Darker border */
+}
+
+.skills h2 {
+    padding: 0.3rem 1rem;
+    font-size: 1rem;
+    font-weight: 700;
+    color: white; /* White heading */
+}
+
+.skills-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.skills-list li {
+    cursor: pointer;
+    padding: 0.1rem 1rem;
+    margin: 2px 0;
+    font-size: 0.8rem;
+    border-radius: 0.4rem;
+    display: inline-block;
+    color: var(--light); /* White text */
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.skills-list li:hover {
+    transform: translateY(-5px);
+    color: var(--dark); /* Dark text on hover */
+    background-color: var(--background-blue); /* Light blue background on hover */
+}
