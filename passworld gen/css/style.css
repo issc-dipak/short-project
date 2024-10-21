@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css?family=Muli&display=swap');
+
+* {
+  box-sizing: border-box;
+  transition: all 0.3s ease-in-out;
+}
+
+body {
+    background: linear-gradient(135deg, #000025, #525252);
+    color: #fff;
+    font-family: 'Muli', sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    padding: 10px;
+    margin: 0;
+    overflow: hidden;
+}
+
+h2 {
+  margin: 10px 0 20px;
+  text-align: center;
+  font-size: 24px;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  animation: fadeIn 1s ease-in-out;
+}
+
+.container {
+  background: rgba(255, 255, 255, 0.1);
+  box-shadow: 0px 4px 15px rgba(255, 255, 255, 0.3);
+  padding: 25px;
+  border-radius: 15px;
+  width: 400px;
+  max-width: 100%;
+  animation: slideIn 1.2s ease-in-out;
+}
+
+.result-container {
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  position: relative;
+  font-size: 18px;
+  letter-spacing: 1px;
+  padding: 12px 10px;
+  height: 50px;
+  width: 100%;
+  border-radius: 8px;
+}
+
+.result-container #result {
+  word-wrap: break-word;
+  max-width: calc(100% - 40px);
+  overflow-y: scroll;
+  height: 100%;
+  color: #fff;
+}
+
+#result::-webkit-scrollbar {
+  width: 0.8rem;
+}
+
+.result-container .btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  width: 40px;
+  height: 40px;
+  font-size: 20px;
+  background: #ff4b5c;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn {
+  border: none;
+  background-color: #3b3b98;
+  color: #fff;
+  font-size: 16px;
+  padding: 10px 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.4s ease;
+}
+
+.btn:hover {
+  background: #ff4b5c;
+}
+
+.btn-large {
+  display: block;
+  width: 100%;
+  margin-top: 10px;
+}
+
+.setting {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 15px 0;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(-20px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  0% { opacity: 0; transform: scale(0.8); }
+  100% { opacity: 1; transform: scale(1); }
+}
